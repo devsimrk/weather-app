@@ -5,7 +5,7 @@ srchBtn.addEventListener("click", displayWeather)
 
 
 
-//http://openweathermap.org/img/wn/10d@2x.png
+
 
 function displayWeather() {
   let input = document.getElementById("input")
@@ -26,7 +26,7 @@ function displayWeather() {
     
     if (this.status === 200) {
       obj = JSON.parse(this.responseText)
-      // console.log(obj.weather[0].main)
+   
       
       let wind = document.getElementById("wind")
       let temp = document.getElementById("temp")
@@ -35,10 +35,9 @@ function displayWeather() {
       let description = document.getElementById("description")
       let icon = document.getElementById("icon")
       
-      // Array.from(obj).forEach(element => {
-      //   console.log(element.weather)
+      
         
-      // });
+    
       for (const key in obj) {
       }
 
@@ -70,10 +69,11 @@ function displayWeather() {
     }
       
   }
+  xhr.send()
 
+}
 
   
-  xhr.send()
 
        
      
@@ -85,9 +85,6 @@ function displayWeather() {
     
         
    
-    // console.log(obj.definition);
-    // console.log(this.responseText);
-
-}
+    
 
   
